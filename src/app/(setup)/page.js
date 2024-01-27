@@ -1,9 +1,9 @@
-import { initialProfile } from "@/lib/current-profile";
+import { initialProfile } from "@/lib/inital-profile";
 import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { UserButton } from "@clerk/nextjs";
-import { ServerCreateModal } from "@/components/modals/serverCreateModal";
+import { InitialServerCreateModal } from "@/components/modals/InitialServerCreateModal";
 const SetupPage = async () => {
 
     const profile = await initialProfile();
@@ -24,7 +24,7 @@ const SetupPage = async () => {
     return (
 
         <div>
-            <ServerCreateModal></ServerCreateModal>
+            <InitialServerCreateModal></InitialServerCreateModal>
             {/* <UserButton afterSignOutUrl="/sign-in"></UserButton> */}
         </div>
         // <div>
