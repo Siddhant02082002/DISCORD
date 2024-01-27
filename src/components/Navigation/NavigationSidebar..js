@@ -27,7 +27,7 @@ const NavigationSidebar = async () => {
                 <Separator className="h-[2px] bg-zinc-300 dark:bg-zinc-700 rounded-md w-16 mx-auto" />
 
                 {servers.map((server) =>
-                    <NavigationItem name={server.name} id={server.id} Logoimg={server.imageUrl}>
+                    <NavigationItem key={server.id} name={server.name} id={server.id} Logoimg={server.imageUrl}>
                     </NavigationItem>
                 )}
             </div>
