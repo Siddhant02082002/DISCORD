@@ -91,7 +91,11 @@ export const MembersModal = () => {
                             {server?.members?.map((member) => (
                                 <div key={member.id} className="flex h-16 w-full items-center justify-between text-white">
                                     <div className="flex items-start w-[400px]">
+<<<<<<< HEAD
                                         <Image src={member?.profile?.imageUrl} className="flex h-10 w-10 rounded-full items-center justify-center mr-2" />
+=======
+                                        <img src={member?.profile?.imageUrl} className="flex h-10 w-10 rounded-full items-center justify-center mr-2" />
+>>>>>>> 7b1876da99c263722df47f0e512e4f263a71b195
                                         <div className="flex justify-between w-full">
                                             <div className="flex flex-col justify-start items-start text-white">
                                                 <div>{member.profile.name}</div>
