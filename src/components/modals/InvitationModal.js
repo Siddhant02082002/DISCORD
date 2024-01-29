@@ -16,7 +16,6 @@ export const InvitationModal = () => {
     const origin = useOrigin();
     const isModalOpen = isOpen && type === "InvitePeople";
     const server = data;
-    console.log(server)
     const [isCopied, setCopied] = useState(false);
     // console.log(data, "HELLO");
     const handleClose = () => {
@@ -39,13 +38,12 @@ export const InvitationModal = () => {
             console.log(error);
         }
     }
-    console.log(server?.name)
     return (
         <Dialog open={isModalOpen} onOpenChange={handleClose}>
             <DialogContent className="bg-zinc-800 overflow-hidden m-auto">
                 <DialogHeader >
                     <DialogTitle className="flex justify-center text-2xl font-bold">Invite Friends</DialogTitle>
-                    <DialogDescription className="flex justify-center flex-col">
+                    <div className="flex justify-center flex-col">
                         <div className="text-lg">
                             Invite Your Friend to {server?.name}
                         </div>
@@ -62,7 +60,7 @@ export const InvitationModal = () => {
                                 </div>
                             </div>
                         </div>
-                    </DialogDescription>
+                    </div>
                 </DialogHeader>
                 <button onClick={onNew} className="ml-auto h-2 mt-0 gap-2 justify-center items-center flex text-white">
                     <RefreshCw />

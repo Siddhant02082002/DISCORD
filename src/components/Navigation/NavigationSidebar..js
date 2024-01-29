@@ -6,11 +6,10 @@ import NavigationItem from "./NavigationItems";
 import { Separator } from "@/components/ui/separator"
 
 const NavigationSidebar = async () => {
-    const profile = currentProfile();
+    const profile = await currentProfile();
     if (!profile) {
         return redirect("/");
     }
-
     const servers = await db.server.findMany({
         where: {
             members: {

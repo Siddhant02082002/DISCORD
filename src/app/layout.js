@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
         <body className={cn(
           font.className,
           "bg-white dark:bg-[#313338]"
-        )} style={{ backgroundImage: `url(${c.src})`, backgroundSize: 'cover' }}> <ThemeProvider
+        )} style={{/* backgroundImage: `url(${c.src})`,*/ backgroundSize: 'cover' }}> <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem="false"

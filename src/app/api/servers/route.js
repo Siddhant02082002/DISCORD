@@ -2,7 +2,7 @@
 import { db } from "@/lib/db";
 import { currentProfile } from "@/lib/current-profile";
 import { NextResponse } from "next/server";
-import { uuid } from 'uuidv4'
+import { v4 as uuidv4 } from "uuid";
 import { MemberRole } from "@prisma/client";
 export async function POST(req) {
     
@@ -18,7 +18,7 @@ export async function POST(req) {
                 profileId: profile.id,
                 name: name,
                 imageUrl: imageUrl,
-                inviteCode: uuid(),
+                inviteCode: uuidv4(),
                 channels: {
                     create: [
                         {
