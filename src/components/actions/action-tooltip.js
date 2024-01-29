@@ -14,7 +14,7 @@ export function ToolTip({ message, children,side,align }) {
                     {children}
                 </TooltipTrigger>
                 <TooltipContent side={side} align={align}>
-                    <p>{message}</p>
+                    <div>{message}</div>
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>

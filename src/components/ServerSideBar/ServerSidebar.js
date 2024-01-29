@@ -4,7 +4,7 @@ import ServerHeader from "./ServerHeader";
 import ServerSection from "./ServerSection";
 import ServerChannel from "./ServerChannel";
 import { currentProfile } from "@/lib/current-profile";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect } from "next/navigation";
 const ServerSidebar = async ({ serverId }) => {
     const profile = await currentProfile();
     if (!profile) {
@@ -39,7 +39,7 @@ const ServerSidebar = async ({ serverId }) => {
     const members = serverDetails?.members.filter((member) => member.profileId !== profile.id)
     const role = serverDetails?.members.find((member) => member.profileId === profile.id)?.role;
     return (
-        <div className="flex flex-col h-full bg-neutral-700 bg-opacity-95">
+        <div className="flex flex-col h-full rounded-s-xl bg-neutral-700 bg-opacity-95">
             <ServerHeader server={serverDetails} role = {role}></ServerHeader>
             <div>
                 {!!textChannel?.length > 0 && (

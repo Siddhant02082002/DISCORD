@@ -32,7 +32,7 @@ const ServerHeader = ({ server,role }) => {
                     <Settings className="h-4 w-4 ml-auto" />
                 </DropdownMenuItem>
                 <DropdownMenuItem
-                    onClick={() => onOpen("editServer", { server })}
+                    onClick={() => onOpen("members", { server })}
                     className="px-3 py-2 text-sm cursor-pointer hover:bg-neutral-800"
                 >
                     Manage Members
@@ -40,7 +40,7 @@ const ServerHeader = ({ server,role }) => {
                 </DropdownMenuItem>
                 <Separator></Separator>
                 <DropdownMenuItem
-                    onClick={() => onOpen("editServer", { server })}
+                    onClick={() => onOpen("deleteServer", { server })}
                     className="text-red-500 font-semibold px-3 py-2 text-sm cursor-pointer hover:bg-neutral-800 hover:text-red-400"
                 >
                     Delete Channel

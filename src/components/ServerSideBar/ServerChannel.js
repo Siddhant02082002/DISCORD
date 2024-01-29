@@ -19,7 +19,7 @@ const ServerChannel = ({ role, server, channel }) => {
     return (
         <button onClick={onClick} className="group px-2 py-2  flex items-center gap-x-2 w-full hover:bg-neutral-100 dark:hover:bg-zinc-800/50 transition mb-1">
             <Icon className="flex-shrink-0 w-5 h-5 text-zinc-500 dark:text-zinc-400" />
-            <p>{channel.name}</p>
+            <div>{channel.name}</div>
             {channel.name !== "general" && role !== MemberRole.GUEST && (
                 <div className="ml-auto flex items-center gap-x-2">
                     <ToolTip className="group relative flex items-center" side="right" message="Edit" align="center">
